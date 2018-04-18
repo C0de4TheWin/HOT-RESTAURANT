@@ -2,11 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<<<<<<< HEAD
-  <title>Star Wars - Express</title>
-=======
-  <title>Hot Day-Yumm Restaurant</title>
->>>>>>> 978d53aeef46e9ba21ef456f8b627f9465e93612
+  <title>Hot Day-Um Restaurant</title>
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
@@ -17,18 +13,11 @@
 
   <div class="container">
     <div class="jumbotron">
-<<<<<<< HEAD
-      <h1>Hot Day-Um! Have a Seat.</h1>
-      <h3>Make a Reservation Now!</h3>
-      <hr>
-      <a href="/view"><button class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-th-list"></span> View all Reservations</button></a>
-=======
-      <h1>Hot Day-Yumm Restaurant</h1>
+      <h1>Hot Day-Um Restaurant</h1>
       <h3>We only have 5 tables! Book your seat before they all are gone!</h3>
       <hr>
       <a href="/"><button class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-eye-open"></span> Home</button></a>
       <a href="/view"><button class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-th-list"></span> All Reservations</button></a>
->>>>>>> 978d53aeef46e9ba21ef456f8b627f9465e93612
     </div>
     <div class="row">
 
@@ -36,11 +25,7 @@
 
         <div class="panel panel-default">
           <div class="panel-heading">
-<<<<<<< HEAD
-            <h3 class="panel-title"><strong>Table Reservation</strong></h3>
-=======
             <h3 class="panel-title"><strong>Make Reservation</strong></h3>
->>>>>>> 978d53aeef46e9ba21ef456f8b627f9465e93612
           </div>
           <div class="panel-body">
             <form role="form">
@@ -52,39 +37,23 @@
 
               <div class="form-group">
                 <label for="role">Phone Number</label>
-<<<<<<< HEAD
-                <input type="text" class="form-control" id="phone">
-              </div>
-
-              <div class="form-group">
-                <label for="age">Email</label>
-=======
                 <input type="text" class="form-control" id="phone-number">
               </div>
 
               <div class="form-group">
                 <label for="age">E-Mail</label>
->>>>>>> 978d53aeef46e9ba21ef456f8b627f9465e93612
                 <input type="text" class="form-control" id="email">
               </div>
 
               <div class="form-group">
                 <label for="force-points">Reservation Name</label>
-<<<<<<< HEAD
-                <input type="text" class="form-control" id="display_name">
-=======
                 <input type="text" class="form-control" id="user-name">
->>>>>>> 978d53aeef46e9ba21ef456f8b627f9465e93612
               </div>
 
             </form>
             <br>
             <div class="text-right">
-<<<<<<< HEAD
-              <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="glyphicon glyphicon-fire"></span> Add Reservation</button>
-=======
               <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="glyphicon glyphicon-fire"></span> Make Reservation</button>
->>>>>>> 978d53aeef46e9ba21ef456f8b627f9465e93612
             </div>
           </div>
         </div>
@@ -92,29 +61,6 @@
       </div>
     </div>
   </div>
-<<<<<<< HEAD
-  <script type="text/javascript">
- //on-click
-$("#add-btn").on("click", function(event) {
-      event.preventDefault();
-      var postReservation = {
-        name: $("#name").val().trim(),
-        phoneNumber: $("#phone").val().trim(),
-        email: $("#email").val().trim(),
-        display_name: $("#display_name").val().trim()
-      };
- 
-  $.post("api/reservation", postReservation)
-        .then(function(data) {
-          console.log("make.html", data);
-          alert("Adding reservation...");
-        });
-
-    });
-    </script>
-
-
-=======
 
   <script type="text/javascript">
     // Question: What does this code do?
@@ -137,6 +83,5 @@ $("#add-btn").on("click", function(event) {
 
     });
   </script>
->>>>>>> 978d53aeef46e9ba21ef456f8b627f9465e93612
 </body>
 </html>
