@@ -1,35 +1,31 @@
-
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 
-// Sets up the Express App
-// =============================================================
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-// Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// RESERVATION DATA
-var reservation = [{
+var reservations = [
+    {
 
-    name: "Sam",
-    phoneNum: "8675309",
-    email: "sam@gmail.com",
-    uniqueId: "Test",
+        name: "Michael",
+        phoneNumber: "6197883033",
+        email: "michaeljohnson729gmail.com",
+        userName: "Michael"
+    }
+]
+var waitList = [
+    {
 
-}];
-
-var waitlist = [{
-
-    name: "Test",
-    phoneNum: "8675309",
-    email: "sam@gmail.com",
-    uniqueId: "Test1"
-
-}]
+        name: "Michael",
+        phoneNumber: "6197883033",
+        email: "michaeljohnson729gmail.com",
+        userName: "Mike"
+    }
+]
 
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "home.html"));
@@ -43,33 +39,33 @@ app.get("/make", function (req, res) {
     res.sendFile(path.join(__dirname, "make.html"));
 });
 
-//Display Reservations and Wait List
-
-app.get("/api/reservation", function (req, res) {
-    return res.json(reservation);
-
+app.get("/api/reservations", function (req, res) {
+    return res.json(reservations);
 });
 
 app.get("/api/waitlist", function (req, res) {
-    return res.json(waitlist);
-
+    return res.json(waitList);
 });
 
-
-app.post("/api/reservation", function (req, res) {
+app.post("/api/reservations", function (req, res) {
     var newreservation = req.body;
     console.log(newreservation);
-    if (reservation.length <= 4) {
-        reservation.push(newreservation);
+    if (reservations.length <= 4) {
+        reservations.push(newreservation);
     }
     else {
-        waitlist.push(newreservation);
+        waitList.push(newreservation);
     }
     res.json(newreservation);
 });
 
+app.post("/api/waitlist", function (req, res) {
+    var newwaitlist = req.body;
+    console.log(newwaitlist);
+    waitList.push(newwaitlist);
+    res.json(newwaitlist);
+});
+
 app.listen(PORT, function () {
-
     console.log("App listening on PORT " + PORT);
-
 });
